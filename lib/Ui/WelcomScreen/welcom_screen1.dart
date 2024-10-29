@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodapp/CustomWidget/custom_button.dart';
 import 'package:foodapp/Ui/WelcomScreen/welcom_screen2.dart';
-import 'package:foodapp/main.dart';
+import 'package:get/get.dart';
 
 class WelcomScreen1 extends StatefulWidget {
   const WelcomScreen1({super.key});
@@ -23,19 +23,19 @@ class _WelcomScreen1State extends State<WelcomScreen1> {
               children: [
                 Positioned(
                   height: 500.h,
-                  top: -150,
+                  top: -140,
                   right: 20,
                   child: Image.asset(
-                    'assets/yellowcircle.png',
+                    'assets/circle.png',
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 80),
+                  padding: const EdgeInsets.only(top: 80),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        'assets/icon1.png',
+                        'assets/g.png',
                         height: 50.h,
                       ),
                       SizedBox(
@@ -60,8 +60,8 @@ class _WelcomScreen1State extends State<WelcomScreen1> {
                   left: 50,
                   bottom: 2,
                   child: Image.asset(
-                    'assets/icon2.png',
-                    height: 300.h,
+                    'assets/ice.png',
+                    height: 400.h,
                   ),
                 ),
               ],
@@ -90,14 +90,7 @@ class _WelcomScreen1State extends State<WelcomScreen1> {
               ),
               CustomButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return WelcomScreen2();
-                      },
-                    ),
-                  );
+                  Get.to(const WelcomScreen2());
                 },
                 height: 50.h,
                 width: 300.w,

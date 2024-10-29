@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodapp/CustomWidget/custom_button.dart';
-import 'package:foodapp/Ui/WelcomScreen/welcom_screen3.dart';
+import 'package:foodapp/Ui/Auth/Signin/sign_in.dart';
 import 'package:get/get.dart';
 
-class WelcomScreen2 extends StatefulWidget {
-  const WelcomScreen2({super.key});
+class WelcomScreen4 extends StatefulWidget {
+  const WelcomScreen4({super.key});
 
   @override
-  State<WelcomScreen2> createState() => _WelcomScreen2State();
+  State<WelcomScreen4> createState() => _WelcomScreen4State();
 }
 
-class _WelcomScreen2State extends State<WelcomScreen2> {
+class _WelcomScreen4State extends State<WelcomScreen4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,12 +41,12 @@ class _WelcomScreen2State extends State<WelcomScreen2> {
             ),
           ),
           Image.asset(
-            'assets/2.png',
+            'assets/4.png',
             height: 300.h,
             width: 300.w,
           ),
           Text(
-            'All Your Favorites',
+            'Choose your food',
             style: TextStyle(
                 color: Colors.black,
                 fontSize: 30.sp,
@@ -55,7 +55,7 @@ class _WelcomScreen2State extends State<WelcomScreen2> {
           Padding(
             padding: const EdgeInsets.all(20),
             child: Text(
-              'Order from the best local resturents with easy, on-demand delivery.',
+              'Easily find your type of food craving and you\'ll get delivery in wide range.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20.0,
@@ -65,7 +65,7 @@ class _WelcomScreen2State extends State<WelcomScreen2> {
           ),
           CustomButton(
             onPressed: () {
-              Get.to(const WelcomScreen3());
+              Get.to(const SignIn());
             },
             height: 50.h,
             width: 300.w,
